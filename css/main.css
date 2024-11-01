@@ -63,7 +63,7 @@
     margin-bottom: 0; }
 
 
-/*about edit*/
+/*about and contact edit*/
 
 body, html {
   margin: 0;
@@ -81,7 +81,25 @@ body, html {
   position: relative;
 }
 
+.hero-contact {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../img/banner/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
 .hero-content {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 600px;
+}
+
+.hero-content-contact {
   position: absolute;
   top: 80%;
   left: 5%;
@@ -103,6 +121,13 @@ body, html {
 
 .cta-button:hover {
   background-color: #f0f0f0;
+}
+
+.contact-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -444,7 +469,7 @@ h1, h2, h3, h4, h5, h6 {
   .progress-table .country {
     width: 28.07%; }
   .progress-table .visit {
-    width: 19.74%; }
+    width: 19.74% }
   .progress-table .percentage {
     width: 40.36%;
     padding-right: 50px; }
@@ -1491,7 +1516,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     visibility: visible; }
 
-/* end category area css
+/* end category area css below is the about in index.
 ============================================================================================ */
 
 .about {
