@@ -62,6 +62,41 @@
   .section-title p {
     margin-bottom: 0; }
 
+    /*Index button*/
+
+.pill-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #228B22;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.pill-button:hover {
+    background-color: orange;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px rgb(1, 1, 49);
+}
+
+.pill-button .lnr {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.pill-button-text {
+    margin-left: 8px;
+}
+
+    
+    /*end index button*/
+
 
 /*about and contact edit*/
 
@@ -184,7 +219,7 @@ body, html {
     height: 100%;
     width: 100%;
     content: "";
-    background: #000;
+    background: black;
     opacity: 0;
     -webkit-transform: skew(40deg);
     -moz-transform: skew(40deg);
@@ -1520,20 +1555,37 @@ h1, h2, h3, h4, h5, h6 {
 ============================================================================================ */
 
 .about {
-  background: url(../img/about-bg.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  position: relative;
+  min-height: 100vh;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.about::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('../img/banner/about-bgg.jpg') no-repeat;
+	background-position: 1px center; /* Adjusts value for positioning */
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: -1;
+  /*transform: scale(1.1);  creates a slight zoom effect */
+  }
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
 }
 
 .about .content {
   width: 55rem;
+  max-width: 100%;
   background: #fff;
   padding: 3rem;
 }
@@ -1541,12 +1593,15 @@ h1, h2, h3, h4, h5, h6 {
 .about .content span {
   color: green;
   font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .about .content h3 {
   padding-top: 1rem;
   font-size: 3rem;
   color: #222;
+  margin-bottom: 1rem;
 }
 
 .about .content p {
@@ -1565,11 +1620,20 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   cursor: pointer;
   color: #222;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn1:hover {
   color: #fff;
   background: green;
+}
+
+@media (max-width: 768px) {
+  .about .content {
+      width: 100%;
+      padding: 2rem;
+  }
 }
 
 .fh5co-bg-section {
